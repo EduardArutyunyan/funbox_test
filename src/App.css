@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: url('./assets/fonts/trebuchetMS.ttf');
+}
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: url('./assets/fonts/trebuchetMS-bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Exo',;
+  src: url('./assets/fonts/Exo2.0-Thin.otf');
+  font-weight: bold;
+}
+
 .App {
   text-align: center;
 }

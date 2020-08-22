@@ -1,0 +1,95 @@
+$defaultColor: #1698d9;
+$defaultHoverColor: #2ea8e6;
+$selectedColor: #d91667;
+$selectedHoverColor: #e62e7a;
+
+.product-card {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    padding: 25px 50px;
+    overflow: hidden;
+    width: 320px;
+    height: 480px;
+    color: #000000;
+    font-family: 'TrebuchetMS', sans-serif;
+    
+    border: 4px solid $defaultColor;
+    border-radius: 10px;
+    
+    background: #fff url('../../assets/images/cat.png') 45% 205px no-repeat;
+    background-size: 370px;
+
+    &.default {
+        border-color: $defaultColor;
+
+        .product__volume-item {
+            background-color: $defaultColor;
+        }
+    }
+    &.default.hover {
+        border-color: $defaultHoverColor;
+    }
+    &.selected {
+        border-color: $selectedColor;
+    }
+    &.selected.hover {
+        border-color: $selectedHoverColor;
+    }
+    &.disabled {
+        
+    }
+
+
+}
+
+
+.product__head-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #666666;
+}
+
+.product__title {
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.product__sub-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.product__description {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+    text-align: left;
+}
+
+.product__volume-item {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    
+    & .product__volume-item-value {
+        font-size: 42px;
+        line-height: 38px;
+    }
+    & .product__volume-item-value-desc {
+        font-size: 21px;
+        line-height: 14px;
+    }
+        
+}
