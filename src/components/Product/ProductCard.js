@@ -17,7 +17,7 @@ export const ProductCard = ({data}) => {
                 {data.subTitle}
             </div>
             <div className="product__description">
-                <div className="description__amount"><b>{10}</b> порций</div>
+                <div className="description__amount"><b>{data.description.amount}</b> порций</div>
                 <div className="description__gift">
                     <b>{data.description.gift && data.description.gift.amount > 0
                     ? data.description.gift.amount + ' ' 
@@ -29,7 +29,7 @@ export const ProductCard = ({data}) => {
                 <span className="product__volume-item-value-desc">кг</span>
             </div>
             <div className="product__link">
-                <a href={'#'}></a>
+                <a href={'#'}>Ссылку надо сделать</a>
             </div>
         </div>
     )

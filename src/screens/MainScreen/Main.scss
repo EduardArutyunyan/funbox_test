@@ -1,12 +1,12 @@
 .main-screen {
     font-size: 24px;
-    background: url('../../assets/images/main_background.png') no-repeat;
+    background: url('../../assets/images/main_background.png');
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     .content {
         display: flex;
-        flex-flow: row wrap;
+        flex-wrap: wrap;
         justify-content: center;
     }    
 }
