@@ -25,6 +25,7 @@ const mockData = [
     {
         id: 0,
         headText: 'Сказочное заморское яство',
+        headTextSecond: 'Котэ не одобряет?',
         title: 'Нямушка',
         subTitle: 'с фуа-гра',
         description: {
@@ -35,10 +36,15 @@ const mockData = [
             }
         },
         volume: 0.5,
-        image: 'cat.png'
+        footerText: {
+            defaultText: 'Чего сидишь? Порадуй котэ',
+            selectedText: 'Печень утки разварная с артишоками.'
+        },
+        disabled: false 
     }, {
         id: 1,
         headText: 'Сказочное заморское яство',
+        headTextSecond: 'Котэ не одобряет?',
         title: 'Нямушка',
         subTitle: 'с рыбой',
         description: {
@@ -48,21 +54,31 @@ const mockData = [
                 item: 'мыши'
             }
         },
-        volume: 0.5,
-        image: 'cat.png'
+        volume: 2,
+        footerText: {
+            defaultText: 'Чего сидишь? Порадуй котэ',
+            selectedText: 'Головы щучьи с чесноком да свежайшая сёмгушка.'
+        },
+        disabled: false
     }, {
         id: 2,
         headText: 'Сказочное заморское яство',
+        headTextSecond: 'Котэ не одобряет?',
         title: 'Нямушка',
         subTitle: 'с курой',
         description: {
             amount: 100,
             gift: {
                 amount: 5,
-                item: 'мышей'
+                item: 'мышей',
+                bonus: 'заказчик доволен'
             }
         },
-        volume: 0.5,
-        image: 'cat.png'
+        volume: 5,
+        footerText: {
+            defaultText: 'Чего сидишь? Порадуй котэ',
+            selectedText: 'Филе из цыплят с трюфелями в бульоне.'
+        },
+        disabled: true
     },
 ]
