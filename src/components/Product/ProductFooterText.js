@@ -1,7 +1,6 @@
 import React from 'react';
 
 export const ProductFooterText = ({status, footerText, subTitle, onLinkPress}) => {
-
     return (
         <div className="product__footer-text">
             {status.indexOf('default') !== -1
