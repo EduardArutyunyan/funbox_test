@@ -8,7 +8,7 @@ export const MainScreen = (props) => {
 
     return (
         <section className='main-screen'>
-            <p>Главная страница</p>
+            <h4 className="screen-title">Ты сегодня покормил кота?</h4>
             <div className="content">
                 {data.map(item => {
                     return (

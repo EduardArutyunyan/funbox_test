@@ -5,13 +5,14 @@ $selectedHoverColor: #e62e7a;
 $disabledColor: #b3b3b3;
 
 .product-card-wrap {
-    margin: 0 80px 80px 0;
+    margin: 0 40px 80px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .product-card {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
     margin-bottom: 5px;
     box-sizing: border-box;
     position: relative;
@@ -29,15 +30,31 @@ $disabledColor: #b3b3b3;
     background-size: 370px;
     cursor: pointer;
 
+    &::before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 20px;
+        width: 100px;
+        height: 4px;
+        transform: rotate(-45deg);
+    }
+
     &.default {
         border-color: $defaultColor;
-
+        &::before {
+            background-color: $defaultColor;
+        }
         .product__volume-item {
             background-color: $defaultColor;
         }
     }
     &.default.hover {
         border-color: $defaultHoverColor;
+
+        &::before {
+            background-color: $defaultHoverColor;
+        }
         & .product__volume-item {
             background-color: $defaultHoverColor;
         }
@@ -48,6 +65,9 @@ $disabledColor: #b3b3b3;
     &.selected {
         border-color: $selectedColor;
 
+        &::before {
+            background-color: $selectedColor;
+        }
         & .product__volume-item {
             background-color: $selectedColor;
         }
@@ -55,6 +75,9 @@ $disabledColor: #b3b3b3;
     &.selected.hover {
         border-color: $selectedHoverColor;
 
+        &::before {
+            background-color: $selectedHoverColor;
+        }
         & .product__head-text {
             color: $selectedHoverColor;
         }
@@ -67,6 +90,10 @@ $disabledColor: #b3b3b3;
         cursor: unset;
         border-color: $disabledColor;
         color: $disabledColor;
+
+        &::before {
+            background-color: $disabledColor;
+        }
         &::after {
             content: '';
             position: absolute;
@@ -85,7 +112,6 @@ $disabledColor: #b3b3b3;
         }
     }
 }
-
 
 .product__head-text {
     font-size: 16px;
@@ -141,13 +167,20 @@ $disabledColor: #b3b3b3;
 }
 
 .product__footer-text {
-    
-    
     color: #fff;
     font-size: 13px;
+
     & a {
         text-decoration: underline;
         text-decoration-style: dashed;
         color: $defaultColor;
+    }
+}
+
+
+@media screen and (max-width: 1199px) {
+    .product-card-wrap:first-child {
+        flex: 1 100%;
+        
     }
 }
