@@ -6,9 +6,6 @@ import { ProductName } from './ProductName';
 import { ProductHeadText } from './ProductHeadText';
 import { ProductFooterText } from './ProductFooterText';
 
-//TODO: Сделать массив, который будет хранить id выбранных 
-// элементов. Что то вроде корзины. 
-
 export const ProductCard = ({data}) => {
     const [productStatus, setProductStatus] = useState('default');
     const [hover, setHover] = useState(false);

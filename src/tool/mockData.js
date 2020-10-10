@@ -8,7 +8,7 @@ export const mockData = [
         description: {
             amount: 10,
             gift: {
-                amount: 0,
+                amount: 1,
                 item: 'мышь'
             }
         },
