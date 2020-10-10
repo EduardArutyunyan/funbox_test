@@ -40,7 +40,7 @@ const mockData = [
             defaultText: 'Чего сидишь? Порадуй котэ',
             selectedText: 'Печень утки разварная с артишоками.'
         },
-        disabled: false 
+        disabled: true 
     }, {
         id: 1,
         headText: 'Сказочное заморское яство',
@@ -59,7 +59,7 @@ const mockData = [
             defaultText: 'Чего сидишь? Порадуй котэ',
             selectedText: 'Головы щучьи с чесноком да свежайшая сёмгушка.'
         },
-        disabled: false
+        disabled: true
     }, {
         id: 2,
         headText: 'Сказочное заморское яство',
