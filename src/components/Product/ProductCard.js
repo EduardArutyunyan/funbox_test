@@ -18,7 +18,6 @@ export const ProductCard = ({data}) => {
     useEffect(() => {
         if(data.disabled) {
             setProductStatus('disabled')
-            console.log('disabled', data.disabled)
         }
     }, []);
 

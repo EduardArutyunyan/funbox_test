@@ -170,10 +170,11 @@ $disabledColor: #b3b3b3;
     color: #fff;
     font-size: 13px;
 
-    & a {
+    &_link {
         text-decoration: underline;
         text-decoration-style: dashed;
         color: $defaultColor;
+        cursor: pointer;
     }
 }
 
