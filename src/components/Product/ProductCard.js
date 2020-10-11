@@ -13,13 +13,13 @@ export const ProductCard = ({data}) => {
     const [firstSelected, setFirstSelected] = useState(false)
 
     useEffect(() => {
-        if(data.disabled) {
+        if(!data.available) {
             setProductStatus('disabled')
         }
     }, []);
 
     useEffect(() => {
-        if(!data.disabled) {
+        if(data.available) {
             let status = selected ? 'selected' : 'default';  
             let isHover = hover && firstSelected ? ' hover' : '';
             
@@ -31,7 +31,7 @@ export const ProductCard = ({data}) => {
                 setFirstSelected(true)
             };
         }
-    }, [selected, hover])
+    }, [selected, hover, data])
 
     const handleClick = () => {
         if(productStatus.indexOf('default') !== -1) {

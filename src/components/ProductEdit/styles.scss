@@ -1,0 +1,189 @@
+$defaultColor: #1698d9;
+$defaultHoverColor: #2ea8e6;
+$selectedColor: #d91667;
+$selectedHoverColor: #e62e7a;
+$disabledColor: #b3b3b3;
+
+.edit-tools-toggle {
+    position: fixed;
+    right: 1%;
+    top: 1%;
+
+    color: $defaultColor;
+    font-size: 12px;
+    font-family: 'TrebuchetMS', sans-serif;
+    cursor: pointer;
+    
+    &:hover {
+        color: $defaultHoverColor;
+    }
+    &:active {
+        color: $selectedHoverColor;
+    }
+
+}
+
+.edit-tools-container {
+    position: fixed;
+    right: 1%;
+    top: 4%;
+    width: 280px;
+    height: 95vh;
+    background-color: #ffffffef;
+    border-radius: 5px;
+    box-shadow: 0 0 25px -10px #1797d891;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: 'TrebuchetMS', sans-serif;
+    
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s;
+
+    &::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $defaultColor;
+        
+    }
+
+    &_closed {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.edit-tools__title {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.list-view {
+    display: flex;
+    flex-direction: column;
+
+    
+    &__title {
+        cursor: pointer;
+        color: #2f353a;
+        font-size: 16px;
+        margin: 10px 25px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            right: 0;
+            top: 30%;
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-image: url('../../assets/icons/chevron.png');
+            transition: .4s;
+        }
+        
+        &_open::after {
+            transform: rotate(180deg);
+        }
+
+        
+    }
+    &__body {
+        opacity: 0;
+        transition: 0.5s;
+        position: relative;
+
+        & > * {
+            position: absolute;
+            opacity: 0;
+        }
+
+        &_collapsed {
+            opacity: 1;
+            transition-delay: 0s;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 25px;
+
+            & > * {
+                position: unset;
+                opacity: 1;
+            }
+        }
+    
+    }
+    
+}
+
+.edit-tools__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    
+    
+    & span {
+        font-size: 12px;
+        cursor: pointer;
+        margin-left: 2px;
+        margin-bottom: 5px;
+        color: '#111111';
+        text-align: left;
+        font-weight: bold;
+
+    }
+
+}
+
+.edit-tools__input {
+    outline: none;
+    width: 100%;
+    border: 1px solid $disabledColor;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 12px;
+    max-height: 50px;
+
+    &:focus {
+        border: 1px solid $defaultColor;
+    }
+    
+}
+
+.edit-tools__checkbox-label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    
+}
+
+.edit-tools__checkbox {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+}
+
+.edit-tools__button {
+    cursor: pointer;
+    color: $defaultColor;
+    font-size: 16px;
+    margin: 20px;
+
+    &:hover {
+        color: $defaultHoverColor;
+    }
+    &:active {
+        color: $selectedHoverColor;
+    }
+
+}

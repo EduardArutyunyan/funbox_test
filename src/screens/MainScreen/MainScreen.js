@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Main.scss';
 import { ProductCard } from '../../components';
 import { mockData } from '../../tool/mockData';
+import { EditTools } from '../../components/ProductEdit/EditTools';
 
 
 export const MainScreen = (props) => {
@@ -17,6 +18,8 @@ export const MainScreen = (props) => {
                     )
                 })}
             </div>
+
+            <EditTools data={data} onDataEdit={(editedData) => setData(editedData)}/>
         </section>
     )
 }
